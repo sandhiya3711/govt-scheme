@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government of India - Scheme Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- 🇮🇳 Tricolor Header -->
+<div class="top-strip saffron"></div>
+<div class="top-strip white">
+    <h2>Government of India</h2>
+</div>
+<div class="top-strip green"></div>
+
+<div class="container">
+
+    <h1>Scheme Eligibility & Beneficiary Portal</h1>
+    <p class="subtitle">Digital India Initiative</p>
+
+    <form method="post" class="form-card">
+
+        <div class="input-group">
+            <label>Age</label>
+            <input type="number" name="age" required>
+        </div>
+
+        <div class="input-group">
+            <label>Annual Income (₹)</label>
+            <input type="number" name="income" required>
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Occupation</label>
+            <select name="occupation">
+                <option>Farmer</option>
+                <option>Student</option>
+                <option>Worker</option>
+                <option>Any</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Check Eligibility</button>
+    </form>
+
+    <div class="results">
+        <h2>Eligible Schemes</h2>
+
+        {% if schemes %}
+            {% for scheme in schemes %}
+            <div class="scheme-card">
+                <h3>{{ scheme.name }}</h3>
+                <p><strong>Benefit:</strong> {{ scheme.benefit }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-result">No schemes matched yet.</p>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

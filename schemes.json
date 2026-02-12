@@ -1,0 +1,26 @@
+[
+  {
+    "name": "PM Kisan Yojana",
+    "min_age": 18,
+    "max_income": 200000,
+    "gender": "Any",
+    "occupation": "Farmer",
+    "benefit": "₹6000 per year"
+  },
+  {
+    "name": "Ujjwala Yojana",
+    "min_age": 18,
+    "max_income": 150000,
+    "gender": "Female",
+    "occupation": "Any",
+    "benefit": "Free LPG Connection"
+  },
+  {
+    "name": "PM Awas Yojana",
+    "min_age": 21,
+    "max_income": 300000,
+    "gender": "Any",
+    "occupation": "Any",
+    "benefit": "Housing Subsidy"
+  }
+]

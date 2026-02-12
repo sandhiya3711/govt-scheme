@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    position: relative;
+}
+
+/* 🇮🇳 Tricolor Header */
+.top-strip {
+    width: 100%;
+    text-align: center;
+}
+
+.saffron {
+    background: #FF9933;
+    height: 15px;
+}
+
+.white {
+    background: white;
+    padding: 10px;
+}
+
+.white h2 {
+    margin: 0;
+    font-weight: bold;
+    color: #000080;
+}
+
+.green {
+    background: #138808;
+    height: 15px;
+}
+
+/* 🏛 Ashoka Watermark */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    background: url("/static/ashoka.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.06;  /* watermark effect */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #000080;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #000080;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #001f5c;
+    transform: scale(1.03);
+}
+
+.results h2 {
+    text-align: center;
+    color: #000080;
+}
+
+.scheme-card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.no-result {
+    text-align: center;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
